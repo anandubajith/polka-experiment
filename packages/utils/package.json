@@ -1,0 +1,26 @@
+{
+  "name": "@polkadex/utils",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Anandu B Ajith <reach2anandu@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/utils.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node ./__tests__/utils.test.js"
+  },
+  "dependencies": {
+    "@ethersproject/bytes": "^5.7.0",
+    "@polkadot/util": "^10.2.3",
+    "@polkadot/util-crypto": "^10.2.3",
+    "ethers": "^5.7.2"
+  }
+}

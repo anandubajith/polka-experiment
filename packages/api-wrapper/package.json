@@ -1,0 +1,33 @@
+{
+    "name": "@polkadex/api-wrapper",
+    "version": "1.0.3",
+    "description": "> TODO: description",
+    "author": "Anandu B Ajith <reach2anandu@gmail.com>",
+    "homepage": "",
+    "license": "ISC",
+    "main": "lib/api-wrapper.js",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "node ./__tests__/api-wrapper.test.js",
+        "typegen": "npm run typegen-1 && npm run typegen-2 && npm run typegen-3",
+        "typegen-1": "polkadot-types-from-chain --endpoint wss://mainnet.polkadex.trade --output ./src/interfaces",
+        "typegen-2": "polkadot-types-from-defs --endpoint wss://mainnet.polkadex.trade --input ./src/interfaces --package @polkadex/api-wrapper/interfaces",
+        "typegen-3": "./scripts/annotate.sh"
+    },
+    "dependencies": {
+        "@polkadot/api": "^9.11.1",
+        "@polkadot/types": "^9.11.1",
+        "@polkadot/util": "^10.2.3",
+        "@polkadot/util-crypto": "^10.2.3"
+    },
+    "devDependencies": {
+        "@polkadot/typegen": "^9.11.1"
+    }
+}
