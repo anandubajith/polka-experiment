@@ -5,7 +5,7 @@
     "author": "Anandu B Ajith <reach2anandu@gmail.com>",
     "homepage": "",
     "license": "ISC",
-    "main": "lib/api-wrapper.js",
+    "main": "lib/index.js",
     "directories": {
         "lib": "lib",
         "test": "__tests__"
